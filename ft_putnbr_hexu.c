@@ -6,7 +6,7 @@
 /*   By: sopelet <sopelet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 16:35:55 by sopelet           #+#    #+#             */
-/*   Updated: 2025/12/01 16:47:09 by sopelet          ###   ########.fr       */
+/*   Updated: 2026/05/13 18:40:51 by sopelet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_putnbr_hexu(unsigned int nb)
 	{
 		written += ft_putnbr_hexu(nb / 16);
 	}
-	if (nb % 16 >= 0 && nb % 16 <= 9)
+	if (nb % 16 <= 9)
 	{
 		written += ft_putchar(nb % 16 + '0');
 	}
-	if (nb % 16 >= 10 && nb % 16 <= 15)
+	if (nb % 16 >= 10)
 	{
 		written += ft_putchar((nb % 16) - 10 + 'A');
 	}
